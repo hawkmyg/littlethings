@@ -174,6 +174,7 @@ body {
   background: var(--accent);
 }
 
+/* Updates Section */
 .updates {
   background: var(--secondary);
   padding: 2.5em 0;
@@ -208,6 +209,53 @@ body {
   font-family: var(--font-title);
 }
 
+.donation-qrcodes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16em; /* Increased from 2.5em to 5em for more space */
+  flex-wrap: wrap;
+}
+
+.donation-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.6em;
+  color: #000 !important;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.donation-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  /* Optional: add horizontal padding if you want even more space */
+  /* padding: 0 1em; */
+}
+
+.donation-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #000 !important;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.donation-qr-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #ccc5bb44;
+  background: #fff;
+  padding: 8px;
+}
+
+/* Showcase/Carousel */
 .showcase {
   background: var(--secondary);
   padding: 2.5em 0;
@@ -220,13 +268,50 @@ body {
   margin-bottom: 1.5em;
 }
 
-.showcase-grid {
+.carousel {
+  position: relative;
+  width: 620px;
+  margin: 0 auto 2em;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+  align-items: center;
   justify-content: center;
 }
 
+.carousel-track {
+  width: 680px;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #ccc5bb44;
+}
+
+.carousel-btn {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--accent);
+}
+
+/* Product Cards (legacy, can be removed) */
 .product-card {
   background: var(--light);
   border-radius: 12px;
@@ -272,6 +357,7 @@ body {
   box-shadow: 0 1px 5px #b2847a22;
 }
 
+/* Footer */
 .site-footer {
   background: var(--accent);
   color: var(--light);
@@ -300,6 +386,7 @@ body {
   filter: brightness(0.8) invert(0.8) sepia(1) hue-rotate(-40deg) saturate(2);
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .featured-items, .updates-list, .showcase-grid {
     flex-direction: column;
