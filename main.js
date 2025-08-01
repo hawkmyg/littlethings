@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     autoSlideInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % productImages.length;
       showImage(currentIndex);
-    }, 10000); // 3 seconds
+    }, 8000); // 3 seconds
   }
 
   function stopAutoSlide() {
